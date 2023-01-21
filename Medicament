@@ -1,0 +1,78 @@
+import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
+
+public class Medicament {
+	// Attributs de la classe Medicament
+	private String nom;
+	private double prix;
+	private int quantite;
+	private int Stock;
+	private List<Client> Patient;
+	private List<Medicament> medicaments;
+	// ...
+
+	// Constructeur de la classe Medicament
+	public Medicament(String nom, double prix, int quantite, int Stock) {
+		this.nom = nom;
+		this.prix = prix;
+		this.Stock = Stock;
+		this.quantite = quantite;
+		Patient = new ArrayList<>();
+		medicaments = new ArrayList<>();
+	}
+
+	public void afficherMedicament() {
+		System.out.println("Nom du médicament: " + nom);
+		System.out.println("Prix du médicament: " + prix);
+		System.out.println("Quantité de médicament en stock: " + quantite);
+	}
+
+	public void ajouterAuStock(int quantitéAjoutée) {
+		quantite += quantitéAjoutée;
+	}
+
+	public int getStock() {
+		return Stock;
+	}
+
+	public void setStock(int stock) {
+		Stock = stock;
+	}
+
+	// Getters et setters de la classe Medicament
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public double getPrix() {
+		return prix;
+	}
+
+	public void setPrix(double prix) {
+		this.prix = prix;
+	}
+
+	public int getQuantite() {
+		return quantite;
+	}
+
+	public void setQuantite(int quantite) {
+		this.quantite = quantite;
+	}
+
+	// ...
+	protected static void add(Medicament medicament) {
+		// TODO Auto-generated method stub
+
+	}
+
+	protected static void remove(Medicament medicament) {
+		// TODO Auto-generated method stub
+
+	}
+}

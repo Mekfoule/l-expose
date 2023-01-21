@@ -1,0 +1,38 @@
+import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
+public class Commande {
+  // Attributs de la classe Commande
+  private Date date;
+  private Patient patient;
+  private List<Medicament> medicaments;
+  // ...
+
+  // Constructeur de la classe Commande
+  public Commande(Date date, Patient patient, List<Medicament> medicaments) {
+    this.date = date;
+    this.patient = patient;
+    this.medicaments = medicaments;
+    medicaments = new ArrayList<>();
+  }
+
+  // Getters et setters de la classe Commande
+  public Date getDate() {
+    return date;
+  }
+  public void setDate(Date date) {
+    this.date = date;
+  }
+  public Patient getPatient() {
+    return patient;
+  }
+  public void setPatient(Patient patient) {
+    this.patient = patient;
+  }
+  public List<Medicament> getMedicaments() {
+    return medicaments;
+  }
+  public void setMedicaments(List<Medicament> medicaments) {
+    this.medicaments = medicaments;
+  }
+}

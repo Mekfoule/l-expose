@@ -1,0 +1,26 @@
+import java.util.List;
+
+public class Patient extends Client {
+	
+	// Attributs de la classe Patient
+	protected Medicament[] ordonnance;
+	protected String diagnostic;
+	
+	// Constructeur de la classe Patient
+	public Patient(String nom, int age, String adresse, int numeroTelephone, Medicament[] ordonnance, String diagnostic) {
+		super(nom, age, adresse, numeroTelephone);
+		this.ordonnance = ordonnance;
+		this.diagnostic = diagnostic;
+	}
+	
+	public void afficherPatient() {
+	    System.out.println("Nom du patient: " + nom);
+	    System.out.println("Age du patient: " + age);
+	    System.out.println("Adresse du patient: " + adresse);
+	    System.out.println("Numéro de téléphone du patient: " + numeroTelephone);
+	    System.out.println("Ordonnance du patient: " + ordonnance);
+	    System.out.println("Diagnostic du patient: " + diagnostic);
+	 
+	}
+	
+}

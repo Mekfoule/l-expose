@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		Pharmacie pharmacie = new Pharmacie(null, null);
+
+		while (true) {
+			System.out.println("Que voulez-vous faire?");
+			System.out.println("1. Ajouter un patient");
+			System.out.println("2. Ajouter un médicament");
+			System.out.println("3. Afficher la liste des patients");
+			System.out.println("5. Quitter");
+			int choix = scanner.nextInt();
+
+			if (choix == 1) {
+				System.out.println("Entrez le nom du patient:");
+				String nom = scanner.next();
+				System.out.println("Entrez l'âge du patient:");
+				int âge = scanner.nextInt();
+				System.out.println("Entrez le numéro de téléphone du patient:");
+				String numéroDeTéléphone = scanner.next();
+				int numeroTelephone = 0;
+				Patient patient = new Patient(numéroDeTéléphone, numeroTelephone, numéroDeTéléphone, numeroTelephone, null, numéroDeTéléphone);
+				pharmacie.ajouterPatient(patient);
+			} else if (choix == 2) {
+				System.out.println("Entrez le nom du médicament:");
+				String nom = scanner.next();
+				System.out.println("Entrez le prix du médicament:");
+				float prix = scanner.nextFloat();
+				System.out.println("Entrez la quantité de médicament:");
+				int quantité = scanner.nextInt();
+				Medicament médicament = new Medicament(nom, prix, quantité, quantité);
+			} else if (choix == 3) {
+				pharmacie.afficherPatient();
+			} 
+			 else if (choix == 5) {
+				break;
+			} else {
+				System.out.println("Choix non valide. Veuillez réessayer.");
+			}
+		}
+
+		scanner.close();
+	}
+}
